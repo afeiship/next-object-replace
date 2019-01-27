@@ -1,0 +1,28 @@
+{
+  "name": "next-object-replace",
+  "version": "0.0.1",
+  "description": "Replace for object key/value",
+  "main": "dist/next-object-replace.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-object-replace",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ]
+}
