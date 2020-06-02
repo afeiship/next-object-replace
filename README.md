@@ -1,15 +1,22 @@
 # next-object-replace
-> Replace for object key/value
+> Replace for object key/value.
 
-## install:
+## installation
 ```bash
-npm install -S afeiship/next-object-replace --registry=https://registry.npm.taobao.org
+npm install -S @feizheng/next-object-replace
 ```
 
-## usage:
+## usage
 ```js
-//DOCS here!
-```
+import '@feizheng/next-object-replace';
 
-## related:
-- [next-array-replace](https://github.com/afeiship/next-array-replace)
+const obj = {
+  '÷': '/',
+  '×': '*'
+};
+
+const res = 'A+b×0.8+(C÷D)';
+nx.objectReplace(str, obj);
+
+// A+b*0.8+(C/D)
+```
