@@ -8,7 +8,7 @@ describe('api.basic test', () => {
       '×': '*'
     };
 
-    var str1 = 'A+b×0.8+(C÷D)';
-    expect(nx.objectReplace(str1, obj)).toBe('A+b*0.8+(C/D)');
+    var str1 = 'A+b×0.8+(C÷D)÷E';
+    expect(nx.objectReplace(str1, obj)).toBe('A+b*0.8+(C/D)/E');
   });
 });

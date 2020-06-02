@@ -1,11 +1,14 @@
 (function () {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
+  var escapeStringRegexp = require('escape-string-regexp');
+
 
   nx.objectReplace = function (inString, inObject) {
     if (!inString) return;
     nx.forIn(inObject, function (key, value) {
-      inString = inString.replace(key, value);
+      var regexp = new RegExp(escapeStringRegexp(key), 'g');
+      inString = inString.replace(regexp, value);
     });
     return inString;
   };
