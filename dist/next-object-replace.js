@@ -2,8 +2,8 @@
  * name: @feizheng/next-object-replace
  * description: Replace for object key/value.
  * homepage: https://github.com/afeiship/next-object-replace
- * version: 1.1.0
- * date: 2020-06-02T02:12:01.238Z
+ * version: 1.1.1
+ * date: 2020-06-03T00:02:55.073Z
  * license: MIT
  */
 
@@ -14,7 +14,7 @@
 
 
   nx.objectReplace = function (inString, inObject) {
-    if (!inString) return;
+    if (!inString || !inObject) return inString;
     nx.forIn(inObject, function (key, value) {
       var regexp = new RegExp(escapeStringRegexp(key), 'g');
       inString = inString.replace(regexp, value);

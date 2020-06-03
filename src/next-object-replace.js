@@ -5,7 +5,7 @@
 
 
   nx.objectReplace = function (inString, inObject) {
-    if (!inString) return;
+    if (!inString || !inObject) return inString;
     nx.forIn(inObject, function (key, value) {
       var regexp = new RegExp(escapeStringRegexp(key), 'g');
       inString = inString.replace(regexp, value);
