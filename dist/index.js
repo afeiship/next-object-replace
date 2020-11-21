@@ -1,8 +1,16 @@
+/*!
+ * name: @jswork/next-object-replace
+ * description: Replace for object key/value.
+ * homepage: https://github.com/afeiship/next-object-replace
+ * version: 1.0.0
+ * date: 2020-11-21 10:22:07
+ * license: MIT
+ */
+
 (function () {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
+  var nx = global.nx || require('@jswork/next');
   var escapeStringRegexp = require('escape-string-regexp');
-
 
   nx.objectReplace = function (inString, inObject) {
     if (!inString || !inObject) return inString;
